@@ -25,7 +25,7 @@ class UserProfileManager(BaseUserManager):
         user.is_staff = True
         user.save(using=self._db) 
 
-class Userprofile(AbstractBaseUser,PermissionsMixin):
+class UserProfile(AbstractBaseUser,PermissionsMixin):
   """Database modal  for users in the Syatem """
   email =models.EmailField(max_length=255,unique=True)  
   name=models.CharField(max_length=255)
